@@ -24,7 +24,7 @@ exports.sendDailyPushNotification = functions.pubsub.schedule('30 16 * * *')
     .onRun(async () => {
         try {
             const response = await getTopWallpapers();
-            const topic = "TEST" /*RANDOM_WALLPAPER*/
+            const topic = 'RANDOM_WALLPAPER'
 
             if (response) {
                 const image = response.data[0]
