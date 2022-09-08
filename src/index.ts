@@ -19,7 +19,7 @@ const instance = axios.create({
 });
 
 //send daily push notification with london timezone at 12:40pm
-exports.sendDailyPushNotification = functions.pubsub.schedule('* * * * *')
+exports.sendDailyPushNotification = functions.pubsub.schedule('30 16 * * *')
     .timeZone('Africa/Abidjan')
     .onRun(async () => {
         try {
